@@ -17,8 +17,7 @@ export class PlotPageComponent {
         x: [],
         y: [],
         type: 'scatter',
-        mode: 'lines+points',
-        marker: { color: 'red' }
+        mode: 'lines+points'
       }
     ],
     layout: {
@@ -40,10 +39,21 @@ export class PlotPageComponent {
       .subscribe((d) => {
         console.log(d);
         this.mockData = d;
-        this.graph.data[0].x = this.mockData.x;
-        this.graph.data[0].y = this.mockData.y;
+
+        const data = {
+          x: this.mockData.x,
+          y: this.mockData.y,
+          type: 'scatter',
+          mode: 'lines+points'
+        };
+        this.graph.data.push(data);
+
         this.mockStatus = JSON.stringify(this.mockData, null, 2);
         this.gets += 1;
       });
+  }
+
+  clearPlot(): void {
+    this.graph.data.splice(0);
   }
 }

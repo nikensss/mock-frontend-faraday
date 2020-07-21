@@ -3,21 +3,27 @@
     mat-raised-button
     color="primary"
     type="button"
-    aria-label="Toggle sidenav"
+    aria-label="Get mock data"
     mat-button
     (click)="getMockData()"
   >
     Get mock data!
   </button>
 
+  <button
+    mat-raised-button
+    color="warn"
+    type="button"
+    aria-label="Clear plot"
+    mat-button
+    (click)="clearPlot()"
+  >
+    Clear plot
+  </button>
+
   <div>
     <span>Amount of data</span>
-    <input
-      #myInput
-      (change)="getMockData()"
-      (input)="length = myInput.value"
-      type="number"
-    />
+    <input #myInput (input)="length = myInput.value" type="number" />
   </div>
 
   <p>Mocks received: {{ gets }}</p>
