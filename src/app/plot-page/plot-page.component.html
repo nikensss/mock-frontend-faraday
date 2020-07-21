@@ -1,11 +1,32 @@
-<button
-  type="button"
-  aria-label="Toggle sidenav"
-  mat-button
-  (click)="getMockData()"
->
-  Get mock data!
-</button>
-<p>Mocks received: {{ gets }}</p>
+<div class="wrapper">
+  <button
+    mat-raised-button
+    color="primary"
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-button
+    (click)="getMockData()"
+  >
+    Get mock data!
+  </button>
 
-<p>Mock data: {{ mockData }}</p>
+  <div>
+    <span>Amount of data</span>
+    <input
+      #myInput
+      (change)="getMockData()"
+      (input)="length = myInput.value"
+      type="number"
+    />
+  </div>
+
+  <p>Mocks received: {{ gets }}</p>
+
+  <div class="plot">
+    <plotly-plot [data]="graph.data" [layout]="graph.layout"></plotly-plot>
+  </div>
+
+  <p>Mock data:</p>
+
+  <p>{{ mockStatus }}</p>
+</div>

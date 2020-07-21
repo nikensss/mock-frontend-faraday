@@ -14,7 +14,8 @@ export class HomePageComponent {
   echo() {
     this.http.get('http://localhost:3000/echo').subscribe((d) => {
       console.log(d);
-      this.echoStatus = JSON.stringify(d);
+      this.echoStatus = JSON.stringify(d, null, 2);
+      console.log(this.echoStatus);
       this.echoes += 1;
     });
   }

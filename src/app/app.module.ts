@@ -17,8 +17,20 @@ import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PlotPageComponent } from './plot-page/plot-page.component';
 
+import * as PlotlyJS from 'plotly.js/dist/plotly.js';
+import { PlotlyModule } from 'angular-plotly.js';
+import { AboutPageComponent } from './about-page/about-page.component';
+
+PlotlyModule.plotlyjs = PlotlyJS;
+
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomePageComponent, PlotPageComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomePageComponent,
+    PlotPageComponent,
+    AboutPageComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,7 +42,8 @@ import { PlotPageComponent } from './plot-page/plot-page.component';
     MatIconModule,
     LayoutModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    PlotlyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

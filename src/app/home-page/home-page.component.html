@@ -1,6 +1,11 @@
-<button type="button" aria-label="Toggle sidenav" mat-button (click)="echo()">
+<button
+  type="button"
+  aria-label="Toggle sidenav"
+  mat-raised-button
+  (click)="echo()"
+>
   Do echo!
 </button>
-<p>Echoes: {{ echoes }}</p>
+<span>Echoes: {{ echoes }}</span>
 
 <p>Echo status: {{ echoStatus }}</p>

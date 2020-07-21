@@ -11,3 +11,12 @@
     margin: 0.2rem;
   }
 }
+
+.logo {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
