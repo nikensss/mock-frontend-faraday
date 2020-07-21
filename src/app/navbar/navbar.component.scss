@@ -1,0 +1,13 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  list-style: none;
+
+  .link {
+    display: inline;
+    margin: 0.2rem;
+  }
+}
