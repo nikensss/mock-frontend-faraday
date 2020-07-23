@@ -24,10 +24,9 @@ export class PlotPageComponent {
       width: 800,
       height: 640,
       yaxis: {
-        range: [0, 14],
-        title: 'Number of Items in Stock'
+        title: 'Magnitude units'
       },
-      title: 'A Fancy Plot'
+      title: 'A Random Plot'
     }
   };
 

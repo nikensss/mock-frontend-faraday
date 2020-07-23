@@ -20,6 +20,7 @@ import { PlotPageComponent } from './pages/plot-page/plot-page.component';
 import * as PlotlyJS from 'plotly.js/dist/plotly.js';
 import { PlotlyModule } from 'angular-plotly.js';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { EchoPageComponent } from './pages/echo-page/echo-page.component';
 
 PlotlyModule.plotlyjs = PlotlyJS;
 
@@ -29,7 +30,8 @@ PlotlyModule.plotlyjs = PlotlyJS;
     NavbarComponent,
     HomePageComponent,
     PlotPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    EchoPageComponent
   ],
   imports: [
     BrowserModule,
