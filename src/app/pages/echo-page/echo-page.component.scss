@@ -1,0 +1,11 @@
+.wrapper {
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+
+  button,
+  span,
+  p {
+    margin: 0.33rem;
+  }
+}
